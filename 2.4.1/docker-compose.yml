@@ -1,0 +1,13 @@
+version: '3'
+services:
+  webdav:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      AUTH_TYPE: Digest
+      USERNAME: alice
+      PASSWORD: xqurry57
+    volumes:
+      - /tmp/dav:/var/lib/dav
